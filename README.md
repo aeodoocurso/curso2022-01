@@ -7,4 +7,11 @@ Revisar también si el nombre y apellidos son correctos.
 | Nombre | Apellidos | Discord | Github | Instalación (SI/NO) | Git (SI/NO) |
 | -- | -- | -- | -- | -- | -- |
 | Angel | Moya | AngelMoya | angelmoya | SI | OK |
-| Olga | Cirauqui | Olga | OlgaOdoo | SI | OKK |
+
+| Angel | Moya | AngelMoya | angelmoya | SI | SI |
+| Jonathan | Camacho | jon | jonathan673 | SI | SI |
+| Guillermo | Gallego Desdentado | Willytal#6591 | willytal | SI | SI |
+| Gorka | Gonzalez | gorka_ccbosco | gorka-gl | SI | SI |
+| Olga | Cirauqui | Olga | OlgaOdoo | SI | OK |
+=======
+
