@@ -8,6 +8,7 @@ Revisar también si el nombre y apellidos son correctos.
 | -- | -- | -- | -- | -- | -- |
 | Angel | Moya | AngelMoya | angelmoya | SI | SI |
 | Jesus | Aparicio | jmaparicio | jmapariciorobotnik | SI | SI |
+| Jonathan | Camacho | jon | jonathan673 | SI | SI |
 xxx
 
 yyy
