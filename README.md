@@ -9,6 +9,6 @@ Revisar también si el nombre y apellidos son correctos.
 | Angel | Moya | AngelMoya | angelmoya | SI | SI |
 | Jesus | Aparicio | jmaparicio | jmapariciorobotnik | SI | SI |
 | Jonathan | Camacho | jon | jonathan673 | SI | SI |
-xxx
+| Guillermo | Gallego Desdentado | Willytal#6591 | willytal | SI | SI |
+| Gorka | Gonzalez | gorka_ccbosco | gorka-gl | SI | SI |
 
-yyy
