@@ -5,4 +5,4 @@ Por favor, que cada uno ponga en este fichero su login de discord y de github e 
 Revisar también si el nombre y apellidos son correctos.
 
 | Nombre | Apellidos | Discord | Github | Instalación (SI/NO) | Git (SI/NO) |
-| -- | -- | -- | -- | -- | -- |
+| Xavier | Pumarola Rof | xpumarola | xpumarolaAPEN | SI | SI |
