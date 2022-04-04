@@ -1,0 +1,80 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="helpdesk_ticket_view_form">
+      <field name="name">Helpdesk Tickets</field>
+      <field name="model">helpdesk.ticket</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <group>
+              <field name='name'/>
+              <field name='description'/>
+              <field name='date'/>
+            </group>
+            <group>
+              <field name='limit_date'/>
+              <field name='assigned'/>
+              <field name='acctions_todo'/>
+            </group>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="helpdesk_ticket_view_tree" model="ir.ui.view">
+      <field name="name">Helpdesk Ticket</field>   
+      <field name="model">helpdesk.ticket</field>   
+      <field name="arch" type="xml">
+          <tree>       
+              <field name="name"/>       
+              <field name="date"/>     
+          </tree>  
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="helpdesk_ticket_action">
+      <field name="name">Helpdesk Tickets</field>
+      <field name="res_model">helpdesk.ticket</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="helpdesk_enricjulia.action_server">
+      <field name="name">helpdesk_enricjulia server</field>
+      <field name="model_id" ref="model_helpdesk_enricjulia_helpdesk_enricjulia"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="HelpDesk" id="helpdesk_menu"/>
+    <menuitem id="helpdesk_ticket_menu" name="Tickets" sequence='10' parent="helpdesk_menu"/>
+    
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="helpdesk_enricjulia.menu_1" parent="helpdesk_enricjulia.menu_root"/>
+    <menuitem name="Menu 2" id="helpdesk_enricjulia.menu_2" parent="helpdesk_enricjulia.menu_root"/>
+-->
+    <!-- actions -->
+
+    <menuitem name="All tickets" id="helpdesk_ticket" parent="helpdesk_ticket_menu" action="helpdesk_ticket_action"/>
+<!--
+    <menuitem name="Server to list" id="helpdesk_enricjulia" parent="helpdesk_enricjulia.menu_2"
+              action="helpdesk_enricjulia.action_server"/>
+-->
+  </data>
+</odoo>
