@@ -17,6 +17,8 @@
               <field name='limit_date'/>
               <field name='assigned'/>
               <field name='acctions_todo'/>
+              <field name='user_id'/>
+              <field name='state'/>
             </group>
           </group>
         </form>
