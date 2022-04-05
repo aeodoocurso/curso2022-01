@@ -1,82 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="helpdesk_ticket_view_form">
-      <field name="name">Helpdesk Tickets</field>
-      <field name="model">helpdesk.ticket</field>
-      <field name="arch" type="xml">
-        <form>
-          <group>
-            <group>
-              <field name='name'/>
-              <field name='description'/>
-              <field name='date'/>
-            </group>
-            <group>
-              <field name='limit_date'/>
-              <field name='assigned'/>
-              <field name='acctions_todo'/>
-              <field name='user_id'/>
-              <field name='state'/>
-            </group>
-          </group>
-        </form>
-      </field>
+    <record id="view_helpdesk_ticket_tree" model="ir.ui.view">
+        <field name="name">view.helpdesk_ticket.tree</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <tree string="Tickets">
+                <field name="sequence" widget="handle"/>                
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="date" optional="show"/>
+                <field name="limit_date" optional="hide"/>
+                <field name="state"/>                
+            </tree>
+        </field>
     </record>
-
-    <record id="helpdesk_ticket_view_tree" model="ir.ui.view">
-      <field name="name">Helpdesk Ticket</field>   
-      <field name="model">helpdesk.ticket</field>   
-      <field name="arch" type="xml">
-          <tree>       
-              <field name="name"/>       
-              <field name="date"/>     
-          </tree>  
-      </field>
+    <record id="view_helpdesk_ticket_form" model="ir.ui.view">
+        <field name="name">view.helpdesk_ticket.form</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <form string="Ticket">         
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>   
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Ticket Name" />
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group name="main">
+                        <group name="user">
+                            <field name="user_id"/>
+                            <field name="assigned"/>
+                        </group>
+                        <group name="dates">
+                            <field name="date"/>
+                            <field name="limit_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <group>
+                                <field name="description" nolabel="1"/>                        
+                            </group>
+                        </page>
+                        <page string="Actions">
+                            <group>
+                                <field name="acctions_todo" nolabel="1"/>                        
+                            </group>
+                        </page>
+                    </notebook>
+                    
+                        
+                </sheet>              
+            </form>
+        </field>
     </record>
-
-    <!-- actions opening views on models -->
-
-    <record model="ir.actions.act_window" id="helpdesk_ticket_action">
-      <field name="name">Helpdesk Tickets</field>
-      <field name="res_model">helpdesk.ticket</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="helpdesk_enricjulia.action_server">
-      <field name="name">helpdesk_enricjulia server</field>
-      <field name="model_id" ref="model_helpdesk_enricjulia_helpdesk_enricjulia"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
-
-    <!-- Top menu item -->
-
-    <menuitem name="HelpDesk" id="helpdesk_menu"/>
-    <menuitem id="helpdesk_ticket_menu" name="Tickets" sequence='10' parent="helpdesk_menu"/>
     
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="helpdesk_enricjulia.menu_1" parent="helpdesk_enricjulia.menu_root"/>
-    <menuitem name="Menu 2" id="helpdesk_enricjulia.menu_2" parent="helpdesk_enricjulia.menu_root"/>
--->
-    <!-- actions -->
+    <record id="helpdesk_ticket_action_all" model="ir.actions.act_window">
+        <field name="name">Helpdesk Tickets</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">helpdesk.ticket</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new ticket
+            </p>
+        </field>
+    </record>
+    
+    <menuitem id="helpdeks_menu" name="Helpdesk" sequence="10"/>
+    <menuitem id="helpdeks_tickets_menu" name="Tickets" sequence="10" parent="helpdeks_menu"/>
+    <menuitem id="all_helpdesk_tickets_menu" name="All Tickets" sequence="10" parent="helpdeks_tickets_menu" action="helpdesk_ticket_action_all"/>
 
-    <menuitem name="All tickets" id="helpdesk_ticket" parent="helpdesk_ticket_menu" action="helpdesk_ticket_action"/>
-<!--
-    <menuitem name="Server to list" id="helpdesk_enricjulia" parent="helpdesk_enricjulia.menu_2"
-              action="helpdesk_enricjulia.action_server"/>
--->
-  </data>
 </odoo>

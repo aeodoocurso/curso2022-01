@@ -3,7 +3,7 @@ from odoo import fields,models
 class HelpdeskTicket(models.Model):
     _name = 'helpdesk.ticket'
     _description = 'Helpdesk Ticket'
-    #_order = "sequence"
+    _order = "sequence"
 
     name = fields.Char()
     description = fields.Text()
@@ -14,16 +14,19 @@ class HelpdeskTicket(models.Model):
     user_id = fields.Many2one(
         comodel_name='res.users',
         string='Assigned to')
+    sequence = fields.Integer()
+
     state = fields.Selection(
-        #[Nevo.]
+        #[Nuevo,asignado,en_proceso,pendiente,resuelto,cancelado]
         [('nuevo','Nuevo'),
          ('asignado','Asignado'),
          ('en_proceso','En proceso'),
          ('pendiente','Pendiente'),
          ('resuelto','Resuelto'),
          ('cancelado','Cancelado')],
-         string='State'
-    )
+         string='State',
+         default='nuevo')
+    
         
 
     
