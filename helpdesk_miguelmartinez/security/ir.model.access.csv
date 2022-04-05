@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-helpdesk_miguelmartinez.access_helpdesk_tickets,access_helpdesk_tickets,helpdesk_miguelmartinez.model_helpdesk_tickets,base.group_user,1,0,0,0 
+helpdesk_miguelmartinez.access_helpdesk_tickets,access_helpdesk_tickets,helpdesk_miguelmartinez.model_helpdesk_ticket,base.group_user,1,0,0,0
