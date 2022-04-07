@@ -41,10 +41,24 @@
                     </group>
                     <notebook>
                         <page string="Description">
-                            <field name="description"/>
+                            <group>
+                                <field name="description" nolabel="1"/>
+                            </group>
                         </page>
-                        <page string="Actions">
-                            <field name="actions_todo"/>
+                        <page string="Actions todo">
+                            <group>
+                                <field name="actions_todo" nolabel="1"/>
+                            </group>
+                        </page>
+                        <page string="Tags">
+                            <group>
+                                <field name="tag_ids" nolabel="1"/>
+                            </group>
+                        </page>
+                        <page string="Actions Done">
+                            <group>
+                                <field name="tag_ids" nolabel="1"/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
