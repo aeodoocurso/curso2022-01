@@ -3,7 +3,7 @@
 
     <!-- Helpdesck Ticket Category -->
     <record id="helpdesk_security_category" model="ir.module.category">
-        <field name="name">Helpdesck</field>
+        <field name="name">Helpdesk</field>
     </record>
 
     <!-- Helpdesck Ticket Permission -->
