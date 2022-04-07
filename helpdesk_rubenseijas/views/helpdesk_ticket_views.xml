@@ -28,7 +28,7 @@
                 </header>
                 <sheet>
                     <div class="oe_title">
-                        <label for="name" class="oe_edit_only" string="Idea Name"/>
+                        <label for="name" class="oe_edit_only" string="Ticket Name"/>
                         <h1><field name="name"/></h1>
                     </div>
                     <group name="main" string="Ticket">
@@ -47,11 +47,21 @@
                                 <field name="description" nolabel="1"/>
                             </group>
                         </page> 
-                        <page string="Actions">
+                        <page string="Actions Todo">
                             <group>
                                 <field name="actions_todo"/>
                             </group>
                         </page> 
+                        <page string="Ticket Actions">
+                            <group>
+                                <field name="action_ids"/>
+                            </group>
+                        </page> 
+                        <page string="Tags">
+                            <group>
+                                <field name="tag_ids"/>
+                            </group>
+                        </page>
                     </notebook>
                 </sheet>
             </form>

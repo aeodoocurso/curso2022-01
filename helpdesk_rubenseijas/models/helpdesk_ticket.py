@@ -21,4 +21,6 @@ class HelpdeskTicket(models.Model):
         ('cancelado', 'Cancelado')],
         string="State", default="nuevo"
     )
-
+    partner_id = fields.Many2one("res.partner", "Customer")
+    action_ids = fields.One2many(comodel_name="helpdesk.ticket.action", inverse_name="ticket_id")
+    tag_ids = fields.Many2many(comodel_name='helpdesk.ticket.tag', string='Ticket Tags')
