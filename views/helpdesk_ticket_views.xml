@@ -69,7 +69,7 @@
                         <page string="Actions Done">
                             <button string="Review" name="review_actions" type="object" class="btn-primary"/>
                              <group>
-                                <field name="action_ids" nolabel="1"/>
+                                <field name="actions_ids" nolabel="1"/>
                              </group>
                         </page>
                         <page string="Tags">

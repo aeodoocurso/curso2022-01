@@ -31,7 +31,7 @@ class HelpdeskTicket(models.Model):
         default='nuevo')
     actions_ids = fields.One2many(
         comodel_name="helpdesk.ticket.action",
-        inverse_name="ticket.id",
+        inverse_name="ticket_id",
         string="Actions done"
     )
     tag_ids = fields.Many2many(
@@ -54,9 +54,7 @@ class HelpdeskTicket(models.Model):
         self.ensure_one()
         self.action_ids.review()
     
-    '''''
     @api.model
     def get_amount_tickets(self):
-        return self.search_count()
-
-    '''''
+        # Give amount of ticket for active user
+        return self.search_count([('user_id', '=', self.env.user.id)])
