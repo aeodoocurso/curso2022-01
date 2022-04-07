@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <record id="view_helpdesk_ticket_tree" model="ir.ui.view">
         <field name="name">view.helpdesk_ticket.tree</field>
         <field name="model">helpdesk.ticket</field>
         <field name="arch" type="xml">
             <tree string="Tickets">
-                <field name="sequence" widget="handle"/>
+                <field name="sequence" widget="handle"/>                
                 <field name="name"/>
                 <field name="user_id"/>
-                <field name="assigned"/>
-                <field name="state"/>
                 <field name="date" optional="show"/>
                 <field name="limit_date" optional="hide"/>
+                <field name="state"/>                
             </tree>
         </field>
     </record>
@@ -32,6 +32,7 @@
                         <group name="user">
                             <field name="user_id"/>
                             <field name="assigned"/>
+
                         </group>
                         <group name="dates">
                             <field name="date"/>
@@ -44,14 +45,23 @@
                                 <field name="description" nolabel="1"/>                        
                             </group>
                         </page>
-                        <page string="Actions">
+                        <page string="Actions TODO">
                             <group>
                                 <field name="actions_todo" nolabel="1"/>                        
                             </group>
                         </page>
+                        <page string="Actions Done">
+                            <button string="Review" name="review_actions" type="object" class="btn-primary"/>
+                             <group>
+                                <field name="action_ids" nolabel="1"/>
+                             </group>
+                        </page>
+                        <page string="Tags">
+                             <group>
+                                <field name="tag_ids" nolabel="1"/>
+                             </group>
+                        </page>
                     </notebook>
-
-
                 </sheet>              
             </form>
         </field>
@@ -69,7 +79,9 @@
             </p>
         </field>
     </record>
-    <menuitem id="helpdeks_menu" name="Helpdesk" sequence="10"/>
-    <menuitem id="helpdeks_tickets_menu" name="Tickets" sequence="10" parent="helpdeks_menu"/>
-    <menuitem id="all_helpdesk_tickets_menu" name="All Tickets" sequence="10" parent="helpdeks_tickets_menu" action="helpdesk_ticket_action_all"/>
+
+    <menuitem id="helpdesk_menu" name="Helpdesk" sequence="10"/>
+    <menuitem id="helpdesk_tickets_menu" name="Tickets" sequence="10" parent="helpdesk_menu"/>
+    <menuitem id="all_helpdesk_tickets_menu" name="All Tickets" sequence="10" parent="helpdesk_tickets_menu" action="helpdesk_ticket_action_all"/>
+
 </odoo> 
