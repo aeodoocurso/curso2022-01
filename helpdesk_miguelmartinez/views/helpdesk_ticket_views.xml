@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <record id="view_helpdesk_ticket_tree" model="ir.ui.view">
         <field name="name">view.helpdesk_ticket.tree</field>
         <field name="model">helpdesk.ticket</field>
@@ -31,6 +32,7 @@
                         <group name="user">
                             <field name="user_id"/>
                             <field name="assigned"/>
+
                         </group>
                         <group name="dates">
                             <field name="date"/>
@@ -43,10 +45,21 @@
                                 <field name="description" nolabel="1"/>                        
                             </group>
                         </page>
-                        <page string="Actions">
+                        <page string="Actions TODO">
                             <group>
                                 <field name="actions_todo" nolabel="1"/>                        
                             </group>
+                        </page>
+                        <page string="Actions Done">
+                            <button string="Review" name="review_actions" type="object" class="btn-primary"/>
+                             <group>
+                                <field name="action_ids" nolabel="1"/>
+                             </group>
+                        </page>
+                        <page string="Tags">
+                             <group>
+                                <field name="tag_ids" nolabel="1"/>
+                             </group>
                         </page>
                     </notebook>
 
@@ -55,6 +68,7 @@
             </form>
         </field>
     </record>
+
     <record id="helpdesk_ticket_action_all" model="ir.actions.act_window">
         <field name="name">Helpdesk Tickets</field>
         <field name="type">ir.actions.act_window</field>
