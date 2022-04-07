@@ -25,7 +25,9 @@
                         <h1><field name="name"/></h1>
                     </div>
                     <group name="main">
-                        <field name="description"/>
+                        <group name="Descripción">
+                            <field name="description"/>
+                        </group>
                     </group>
                 </sheet>
             </form>
