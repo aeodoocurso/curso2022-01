@@ -11,7 +11,7 @@
                 <field name="user_id"/>
                 <field name="date" optional="show"/>
                 <field name="limit_date" optional="hide"/>
-                <field name="state"/>                
+                <field name="state"/>                         
             </tree>
         </field>
     </record>
@@ -37,6 +37,10 @@
                         <group name="dates">
                             <field name="date"/>
                             <field name="limit_date"/>
+                        </group>
+                        <group name="partners">
+                            <!--<field name="partner_id"/>-->
+                            <field name="partner_id" domain="[('is_company','=',True)]"/>
                         </group>
                     </group>
                     <notebook>
