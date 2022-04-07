@@ -61,10 +61,21 @@
                                 <field name="description" nolabel="1"/>                        
                             </group>
                         </page>
-                        <page string="Actions">
+                        <page string="Actions TODO">
                             <group>
                                 <field name="actions_todo" nolabel="1"/>                        
                             </group>
+                        </page>
+                        <page string="Actions Done">
+                            <button string="Review" name="review_actions" type="object" class="btn-primary"/>
+                             <group>
+                                <field name="action_ids" nolabel="1"/>
+                             </group>
+                        </page>
+                        <page string="Tags">
+                             <group>
+                                <field name="tag_ids" nolabel="1"/>
+                             </group>
                         </page>
                     </notebook>
 
