@@ -1,0 +1,498 @@
+[33mcommit a1a7209509dd6b88f2b8bba45cab294564dee413[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: = <=>
+Date:   Thu Apr 7 15:34:51 2022 +0000
+
+    actualización
+
+[33mcommit e181d53e3074e7a07ac7bf0ddfcf35a71779f032[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 181ffd7 9f40e22
+Author: OlgaOdoo <102747812+OlgaOdoo@users.noreply.github.com>
+Date:   Thu Apr 7 17:29:46 2022 +0200
+
+    Merge branch 'aeodoocurso:main' into main
+
+[33mcommit 181ffd7014eb9fae37bf118020c23c9b56016760[m
+Author: = <=>
+Date:   Thu Apr 7 14:29:48 2022 +0000
+
+    seguridad
+
+[33mcommit 9f40e2241c2961a71df9fb24cfa3d6b9a07c5334[m
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Wed Apr 6 18:33:45 2022 +0200
+
+    Create TASK-01.03.md
+
+[33mcommit 17e6a436b8798bae9574096d6d2fbfa3e033be84[m
+Author: = <=>
+Date:   Tue Apr 5 17:03:54 2022 +0000
+
+    Tarea
+
+[33mcommit efe07a8f660fbf711450de5e16cdef768e3a9d22[m
+Merge: 69bbe5f 6dfb586
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Tue Apr 5 18:25:02 2022 +0200
+
+    Merge pull request #27 from ManuelArras/arrasm
+    
+    Modificado archivo README
+
+[33mcommit 6dfb586d658dea85a3b3349834bad325a1243730[m
+Merge: 8039422 69bbe5f
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Tue Apr 5 18:24:55 2022 +0200
+
+    Merge branch 'main' into arrasm
+
+[33mcommit 69bbe5f269abf91db4948343b66f8c3dad1b9b4b[m
+Merge: dbba824 b7588bf
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Tue Apr 5 18:24:27 2022 +0200
+
+    Merge pull request #28 from inmaculadaRestoy/nombre
+    
+    Primer commit
+
+[33mcommit dbba824e20cc58937c09e995ffb790e18ac3665d[m
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Tue Apr 5 17:45:05 2022 +0200
+
+    Update TASK-01.02.md
+
+[33mcommit b7588bf7261409a8780b47f82eaa547f4de7f998[m
+Author: inmaculadaRestoy <inmaculada.restoy@guadaltech.es>
+Date:   Tue Apr 5 16:54:32 2022 +0200
+
+    Primer commit
+
+[33mcommit cda8396f831e8c30fae633ef04956a61dd49a5a6[m
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Tue Apr 5 16:46:22 2022 +0200
+
+    Create TASK-01.02.md
+
+[33mcommit 8039422e112a519376575c2b32f1e1e1bba5e29f[m
+Author: ManuelArras <manuel.arras@guadaltech.es>
+Date:   Tue Apr 5 16:44:41 2022 +0200
+
+    Modificado archivo README
+
+[33mcommit 62c1ba1d236f0ab5d5a1188be1f735b3334a06d2[m[33m ([m[1;31morigin/develop[m[33m)[m
+Author: = <=>
+Date:   Mon Apr 4 16:53:38 2022 +0000
+
+    Mi primer módulo
+
+[33mcommit 224df82173d0235973d2ef936e0553c15c5a0a04[m
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 16:49:21 2022 +0200
+
+    Create TASK-01.01.md
+
+[33mcommit ba5fa6ef0e6f911b00d131b73b98073de9f53963[m
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:37:21 2022 +0200
+
+    Update README.md
+
+[33mcommit fa0a4f18b1d81c001f95b84bcdaa9de34d4d9d50[m
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:35:44 2022 +0200
+
+    Update README.md
+
+[33mcommit 22f7e25149cdfb7af857e7e4365fbdeb137c085d[m
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:35:11 2022 +0200
+
+    Update README.md
+
+[33mcommit 46c9decac8da84ed41fdbdaebc94b9f555ac402b[m
+Merge: 80c5a82 c56606a
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:30:16 2022 +0200
+
+    Merge pull request #25 from enrjuli/ejulia_001
+    
+    Añadir Nombre
+
+[33mcommit c56606a8df281b6beff931366b7cc813a77630a0[m
+Merge: be92ab8 80c5a82
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:30:06 2022 +0200
+
+    Merge branch 'main' into ejulia_001
+
+[33mcommit 80c5a82c463fa84d1352c3cf4044dad3b080c9d2[m
+Merge: 30b1259 1589cae
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:29:45 2022 +0200
+
+    Merge pull request #24 from jmapariciorobotnik/main
+    
+    jmaparicio data
+
+[33mcommit 30b125983d2a6581409ce6cbb6f415c4c0e420b8[m
+Merge: 13f61ee 1f6877d
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:29:35 2022 +0200
+
+    Merge pull request #23 from OlgaOdoo/main
+    
+    añadiendo datos
+
+[33mcommit 13f61ee6c4c91a3358807345bd27db8b0866fe78[m
+Merge: 8dd3c75 4a94caf
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:28:20 2022 +0200
+
+    Merge pull request #21 from rubenortegaperez/main-cambio_1
+    
+    COMMIT DE RUBEN
+
+[33mcommit 1f6877d9adbcfdf802f1d308276dba69e3c28dbc[m
+Merge: d9ed803 8dd3c75
+Author: OlgaOdoo <102747812+OlgaOdoo@users.noreply.github.com>
+Date:   Mon Apr 4 15:21:04 2022 +0200
+
+    Merge branch 'main' into main
+
+[33mcommit 4a94caf37a2d464744fd27c73fca36377b85b3a0[m
+Merge: 9b750b5 8dd3c75
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:02:39 2022 +0200
+
+    Merge branch 'main' into main-cambio_1
+
+[33mcommit 8dd3c750a203cb275054b42313e324ae6d932d10[m
+Merge: 2757048 3d48b44
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:02:01 2022 +0200
+
+    Merge pull request #19 from rubenseijas/test_git
+    
+    [ADD] Readme data
+
+[33mcommit 3d48b449b5ac5cd7bcc3d6b4fffb96acf314b870[m
+Merge: f1b7ee0 2757048
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:01:54 2022 +0200
+
+    Merge branch 'main' into test_git
+
+[33mcommit 275704802f75189014d26960bdde8e6eb524344f[m
+Merge: 260dcd6 568f0f6
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:01:30 2022 +0200
+
+    Merge pull request #18 from punt-sistemes-salva/main
+    
+    Commit de prueba
+
+[33mcommit 568f0f69e4db71ccad3b911db7ee9a6f4b526715[m
+Merge: b23633e 260dcd6
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:01:19 2022 +0200
+
+    Merge branch 'main' into main
+
+[33mcommit 260dcd6fe8d137019210be38ae8c66bdd2e80c9b[m
+Merge: 83cd16d e611710
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:00:40 2022 +0200
+
+    Merge pull request #17 from c-pardo/cursoodoo
+    
+    Datos iniciales
+
+[33mcommit e6117109ac9469aab89254355e04c69bd183bb39[m
+Merge: fdc0a9a 83cd16d
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 15:00:19 2022 +0200
+
+    Merge branch 'main' into cursoodoo
+
+[33mcommit 83cd16d033bb35c220b795d2787323f24050dc00[m
+Merge: 1945641 a417cb0
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 14:59:28 2022 +0200
+
+    Merge pull request #15 from Carmen-PL/carmen_cursoodoo
+    
+    Envio datos
+
+[33mcommit a417cb006872562737570d4c300c45b071aa2dca[m
+Merge: 2cbdeae 1945641
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 14:59:06 2022 +0200
+
+    Merge branch 'main' into carmen_cursoodoo
+
+[33mcommit 1945641ffbe64ce2b24067610b48e4bafba98a0d[m
+Merge: 68b7b41 55e0538
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 14:58:34 2022 +0200
+
+    Merge pull request #14 from susana-romero/odoo
+    
+    Añado mi info
+
+[33mcommit 68b7b41b17093b238fb7d4149b72c1416718955e[m
+Merge: 5a60499 a662e18
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 14:56:25 2022 +0200
+
+    Merge pull request #13 from jordiapen/jordi_mod1
+    
+    Mi aportacion
+
+[33mcommit a662e18c53a73a564100176a447156622eab3d89[m
+Merge: 7282750 5a60499
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 14:56:17 2022 +0200
+
+    Merge branch 'main' into jordi_mod1
+
+[33mcommit 5a604996e758a0a12c6aaeed2027434e3ba63d3e[m
+Merge: bb84913 3209ea5
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 14:55:49 2022 +0200
+
+    Merge pull request #10 from Tisho99/main-alberto_martínez
+    
+    ADD Alberto Martínez
+
+[33mcommit 3209ea5a96fda0663afcc0d7973fd1e474414906[m
+Merge: 0b00e67 bb84913
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Mon Apr 4 14:55:39 2022 +0200
+
+    Merge branch 'main' into main-alberto_martínez
+
+[33mcommit be92ab8f886424493f321814fb14551a87c738f3[m
+Author: enrjuli <ejulia@apen.es>
+Date:   Mon Apr 4 09:19:05 2022 +0000
+
+    Añadir Nombre
+
+[33mcommit b23633e509de4bf48e2ca51d488197425d4fd410[m
+Merge: 778a5d3 bb84913
+Author: punt-sistemes-salva <102523976+punt-sistemes-salva@users.noreply.github.com>
+Date:   Mon Apr 4 11:13:37 2022 +0200
+
+    Merge branch 'main' into main
+
+[33mcommit 1589cae484b1102a711ca25978a0cd62bf2808cd[m
+Author: jmaparicio <jmaparicio@robotnik.es>
+Date:   Mon Apr 4 08:46:17 2022 +0200
+
+    jmaparicio data
+
+[33mcommit d9ed80309c035342075ba4cd370ac7756804e44c[m
+Author: = <=>
+Date:   Fri Apr 1 18:30:01 2022 +0000
+
+    añadiendo datos
+
+[33mcommit 2cbdeaed5fc802448a58a0bd793b891169f99055[m
+Author: Carmen-PL <mcpardo@sdi.es>
+Date:   Fri Apr 1 10:12:28 2022 +0000
+
+    Envio datos
+
+[33mcommit fdc0a9a23373d31038af4f1ed2f5332d424ab677[m
+Author: Carlos Pardo <cpardo@sdi.es>
+Date:   Fri Apr 1 11:50:07 2022 +0000
+
+    Datos iniciales
+
+[33mcommit 728275005b3fc3b3984a506c255274c9df6e90e3[m
+Author: Jordi Deumal <jordi@apen.es>
+Date:   Thu Mar 31 21:30:17 2022 +0000
+
+    Mi aportacion
+
+[33mcommit bb84913c02c9cc288390daac7b67ea4944ce7adf[m
+Merge: f129d14 4100a5c
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Fri Apr 1 16:55:49 2022 +0200
+
+    Merge pull request #22 from MMartinezDA/main-cambio
+    
+    Prueba en Linux
+
+[33mcommit 4100a5ccdbc77bd1630ff1179dd6dc01ca425b44[m
+Author: MMartinezDA <mmartinez@datanalisis.es>
+Date:   Fri Apr 1 16:43:27 2022 +0200
+
+    Linux
+
+[33mcommit 9b750b595be886eb3f8529f25ad0ee145c326940[m
+Merge: e6e9a58 f129d14
+Author: rubenortegaperez <60007564+rubenortegaperez@users.noreply.github.com>
+Date:   Fri Apr 1 16:46:05 2022 +0200
+
+    Merge branch 'main' into main-cambio_1
+
+[33mcommit e6e9a584e32f7f82e7dafaf9edc8796cc49838df[m
+Author: rubenortegaperez <rubenortegamx@gmail.com>
+Date:   Fri Apr 1 14:42:53 2022 +0000
+
+    COMMIT DE RUBEN
+
+[33mcommit f129d14ec849e56bfefb9cc76e278db4d69cd5a9[m
+Merge: aed0394 e7b768e
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Fri Apr 1 16:32:34 2022 +0200
+
+    Merge pull request #20 from xpumarolaApen/xpumarola
+    
+    Introduccion
+
+[33mcommit 0b00e67b9a2f23b103ea933a349ad6d639e3a931[m
+Author: amartinez <amartinez@sdi.es>
+Date:   Thu Mar 31 18:09:33 2022 +0200
+
+    ADD Alberto Martínez
+
+[33mcommit f1b7ee0a1fa54714c1b9073fb75c1b9f582aca8e[m
+Author: rubenseijas <rseijas@aira.es>
+Date:   Fri Apr 1 15:59:14 2022 +0200
+
+    [ADD] Readme data
+
+[33mcommit 778a5d313c30d572874fba8bcd6fb8791ddf0382[m
+Author: punt-sistemes-salva <sbenlloch@puntsistemes.es>
+Date:   Fri Apr 1 13:53:01 2022 +0200
+
+    Commit de prueba
+
+[33mcommit 55e053813aed2dac40771e8c04f1199a2641a10b[m
+Author: susana-romero <susana.romero@pesol.es>
+Date:   Thu Mar 31 18:23:56 2022 +0200
+
+    Añado mi info
+
+[33mcommit e7b768e6f4896a3f739595acd8b46fc7a6626437[m
+Author: ApenOdoo <aodoo@apen.es>
+Date:   Thu Mar 31 18:51:18 2022 +0200
+
+    Introduccion
+
+[33mcommit aed03946e93c98a56dbfaf1ae5327bd60811a68c[m
+Merge: d712375 1ad2f5e
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Thu Mar 31 18:27:34 2022 +0200
+
+    Merge pull request #11 from gorka-gl/gorka_cursoodoo
+    
+    Intento de commitear: Gorka
+
+[33mcommit 1ad2f5e98961fbe8f48f95c1da6315fb999689fe[m
+Author: gorka-gl <gorka.gonzalez@ccbosco.net>
+Date:   Thu Mar 31 16:23:43 2022 +0000
+
+    Intento de commitear: Gorka
+
+[33mcommit d712375e76452b5075a49d65e8ad50396af4efd8[m
+Merge: fe64e09 029b7e3
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Thu Mar 31 18:13:46 2022 +0200
+
+    Merge pull request #8 from willytal/curso2022-01-Guillermo
+    
+    Añadiendo descripción inicial - Guillermo
+
+[33mcommit 029b7e37f2f3925dcbb6446d1179a63d09562b58[m
+Author: Guillermo Gallego <guillermo.gallego@tecnativa.com>
+Date:   Thu Mar 31 17:53:57 2022 +0200
+
+    Añadiendo descripción inicial - Guillermo
+
+[33mcommit fe64e09ce6cf61158e3e5cc40f23f6b1e9c4a0c5[m
+Merge: 7515bb1 611b0d5
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Thu Mar 31 18:00:42 2022 +0200
+
+    Merge pull request #9 from Jonathan673/cambios_jonathan
+    
+    Introducción de datos correcta
+
+[33mcommit 611b0d5b38e3b971e549fc2db381430ca54b8656[m
+Author: acondeingeos <aconde@ingesit.com>
+Date:   Thu Mar 31 17:55:14 2022 +0200
+
+    Introducción de datos correcta
+
+[33mcommit 7515bb10cb50327d00977303c6a66a410ee6fb46[m
+Merge: a3d2703 9b0d9cc
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Thu Mar 31 17:05:37 2022 +0200
+
+    Merge pull request #5 from angelmoya/main-cambio_03
+    
+    Main cambio 03
+
+[33mcommit 9b0d9cc89b36bd5968e62180714170d44f445a94[m
+Author: angelmoya <amoyapardo@gmail.com>
+Date:   Thu Mar 31 17:04:24 2022 +0200
+
+    Update readme
+
+[33mcommit a3d27035f7378c70d879439b12e5cb4be36bd99e[m
+Merge: 4201890 299bd27
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Thu Mar 31 16:56:21 2022 +0200
+
+    Merge pull request #3 from angelmoya/main-cambio_02
+    
+    OK -> SI
+
+[33mcommit 299bd2729c6ed2acaa5716d72698b5e049a47e45[m
+Author: angelmoya <amoyapardo@gmail.com>
+Date:   Thu Mar 31 16:47:35 2022 +0200
+
+    OK -> SI
+
+[33mcommit 420189064d275450bddb461024f5b037e5ef84ff[m
+Merge: b0b871a 07c822e
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Thu Mar 31 16:48:54 2022 +0200
+
+    Merge pull request #2 from angelmoya/main-cambio_01
+    
+    OK -> SI
+
+[33mcommit 07c822ec74729aa6a126c6117fe81df93fc76f34[m
+Author: angelmoya <amoyapardo@gmail.com>
+Date:   Thu Mar 31 16:44:56 2022 +0200
+
+    OK -> SI
+
+[33mcommit b0b871a13bf3f053bebd50bedbef62b808af4b10[m
+Merge: 37d5041 5d68d76
+Author: Angel Moya - PESOL <amoyapardo@gmail.com>
+Date:   Thu Mar 31 16:40:01 2022 +0200
+
+    Merge pull request #1 from angelmoya/main
+    
+    ADD angel
+
+[33mcommit 5d68d766ee65933eb32a301fd079899071bd4915[m
+Author: angelmoya <amoyapardo@gmail.com>
+Date:   Thu Mar 31 16:34:18 2022 +0200
+
+    ADD angel
+
+[33mcommit 37d50414576ea7edd7ba1eb8116e38fbabc0dd6c[m
+Author: angelmoya <amoyapardo@gmail.com>
+Date:   Thu Mar 31 16:23:43 2022 +0200
+
+    Añadido descripción inicial
+
+[33mcommit 655834a2c99e1120246cffd32bafacc25117968d[m
+Author: angelmoya <amoyapardo@gmail.com>
+Date:   Thu Mar 31 16:18:27 2022 +0200
+
+    first commit
