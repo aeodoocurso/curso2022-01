@@ -8,3 +8,7 @@ class HelpdeskTicketAction(models.Model):
     description = fields.Text()
     dedicated_time = fields.Datetime()
     ticket_id = fields.Many2one("helpdesk.ticket", "Ticket")
+
+    def review(self):
+        for record in self:
+            record.description = '%s\n%s' % (record.description, '- OK') 

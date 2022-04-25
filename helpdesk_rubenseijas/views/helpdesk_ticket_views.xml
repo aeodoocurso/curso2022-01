@@ -11,7 +11,7 @@
                 <field name="name"/>
                 <field name="user_id"/>
                 <field name="date" optional="show"/>
-                <field name="limit_date"/>
+                <field name="due_date"/>
                 <field name="state"/>
             </tree>
         </field>
@@ -38,7 +38,8 @@
                         </group>
                         <group name="Dates">
                             <field name="date"/>
-                            <field name="limit_date"/>
+                            <field name="due_date"/>
+                            <field name="time" widget="float_time"/>
                         </group>
                     </group>
                     <notebook>
@@ -52,10 +53,11 @@
                                 <field name="actions_todo"/>
                             </group>
                         </page> 
-                        <page string="Ticket Actions">
-                            <group>
-                                <field name="action_ids"/>
-                            </group>
+                        <page string="Actions Done">
+                            <button string="Review" name="review_actions" type="object" class="btn-primary"/>
+                             <group>
+                                <field name="action_ids" nolabel="1"/>
+                             </group>
                         </page> 
                         <page string="Tags">
                             <group>
@@ -68,11 +70,116 @@
         </field>
     </record>
 
+    <!-- Añadir vista search -->
+    <record id="helpdesk_tickets_view_search" model="ir.ui.view">
+        <field name="name">helpdesk_ticket.view.search</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <search string="Tickets">
+                <!-- filtrar por nombre y por usuario asignado -->
+                <field name="name" />
+                <field name="user_id" />
+                <!-- filtrar tickets asignados -->
+                <filter name="user_assigned" string="User Assigned" domain="[('user_id', '=', False)]" />
+                <!-- filtrar tickets sin date_due-->
+                <filter name="no_date" string="No Date" domain="[('date', '=', False)]" />
+                <group name="group_by" string="Group By">
+                    <!-- agrupar por date_due -->
+                    <filter name="due_date" string="Due Date" context="{'group_by':'due_date'}" />
+                    <!-- agrupar por usuario asignado -->
+                    <filter name="user_id" string="User" context="{'group_by':'user_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="helpdesk_tickets_view_kanban" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.view.kanban</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="user_id">
+                <field name="name" />
+                <field name="user_id" />
+                <field name="date" />
+                <field name="color" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="#{!selection_mode ? kanban_color(record.color.raw_value) : ''} oe_kanban_global_click oe_kanban_card d-flex flex-column">
+                            <div class="o_dropdown_kanban dropdown">
+                                <a class="dropdown-toggle o-no-caret btn" role="button" data-toggle="dropdown" data-display="static" href="#" aria-label="Dropdown menu" title="Dropdown menu">
+                                    <span class="fa fa-ellipsis-v"/>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">Edit</a></t>
+                                    <t t-if="widget.deletable"><a role="menuitem" type="delete" class="dropdown-item">Delete</a></t>
+                                    <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                </div>
+                            </div>
+                            <div class="oe_kanban_content flex-grow-1">
+                                <div class="o_kanban_record_title oe_kanban_details">
+                                    <strong><field name="name"/></strong>
+                                </div>
+                                <div class="o_kanban_record_subtitle">
+                                    User: <field name="user_id" />
+                                    Date: <field name="date" />
+                                </div>
+                            </div>
+                            <div class="oe_kanban_footer">
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left"/>
+                                    <div class="oe_kanban_bottom_right">
+                                        <field name="user_id" widget="many2one_avatar_user"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oe_clear"/>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="helpdesk_ticket_view_pivot" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.view.pivot</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <pivot string="Tikets Analisys" disable_linking="true">
+                <field name="user_id" type="col"/>
+                <field name="date" type="row" />
+                <field name="time" widget="float_time" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="helpdesk_ticket_view_graph" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.view.graph</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <graph string="Tickets" type="pie">
+                <field name="user_id" />
+                <field name="time" widget="float_time" type="measure" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="helpdesk_ticket_view_calendar" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.view.calendar</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="arch" type="xml">
+            <calendar string="Tickets" date_start="date" color="state" event_limit="5">
+                <field name="name" />
+                <field name="user_id" />
+                <field name="state" invisible="1"/>
+            </calendar>
+        </field>
+    </record>
+
     <record id="helpdesk_ticket_action_all" model="ir.actions.act_window">
         <field name="name">Helpdesk Tickets</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">helpdesk.ticket</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,kanban,pivot,graph,calendar,form</field>
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
@@ -81,8 +188,9 @@
         </field>
     </record>
 
-    <menuitem id="helpdeks_menu" name="Helpdesk" sequence="10"/>
-    <menuitem id="helpdeks_tickets_menu" name="Tickets" sequence="10" parent="helpdeks_menu"/>
-    <menuitem id="all_helpdesk_tickets_menu" name="All Tickets" sequence="10" parent="helpdeks_tickets_menu" action="helpdesk_ticket_action_all"/>
+    <menuitem id="helpdesk_menu" name="Helpdesk" sequence="10"/>
+    <menuitem id="helpdesk_config_menu" name="Config" sequence="99" parent="helpdesk_menu"/>
+    <menuitem id="helpdesk_tickets_menu" name="Tickets" sequence="10" parent="helpdesk_menu"/>
+    <menuitem id="helpdesk_tickets_all_menu" name="All Tickets" sequence="10" parent="helpdesk_tickets_menu" action="helpdesk_ticket_action_all"/>
 
 </odoo> 

@@ -34,6 +34,19 @@
         </field>
     </record>
 
+    <record id="view_helpdesk_ticket_tag_search" model="ir.ui.view">
+        <field name="name">view.helpdesk_ticket_tag.search</field>
+        <field name="model">helpdesk.ticket.tag</field>
+        <field name="arch" type="xml">
+            <search string="Helpdesk Tags">
+                <field name="name" />
+                <group string="Group By" name="groupby">
+                    <filter name="name_groupby" string="Name" context="{'group_by': 'name'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
     <record id="action_helpdesk_ticket_tags" model="ir.actions.act_window">
         <field name="name">Helpdesk Tickets Tags</field>
         <field name="type">ir.actions.act_window</field>
@@ -46,7 +59,8 @@
             </p>
         </field>
     </record>
+    
+    <menuitem id="helpdesk_ticket_tag_menu" name="Tags" parent="helpdesk_config_menu" action="action_helpdesk_ticket_tags" sequence="20"/>
 
-    <menuitem id="helpdesk_ticket_tag_menu" name="Tags" sequence="12" parent="helpdeks_menu" action="action_helpdesk_ticket_tags"/>
 
 </odoo> 
