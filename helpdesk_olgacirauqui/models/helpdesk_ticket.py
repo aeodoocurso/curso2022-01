@@ -1,3 +1,4 @@
+from dataclasses import field
 from odoo import api,fields,models
 
 class HelpdeskTicket(models.Model):
@@ -6,8 +7,12 @@ class HelpdeskTicket(models.Model):
 
     name = fields.Char()
     description = fields.Text(translate=True)
+    color = fields.Integer('Color Index', default=0)
     date = fields.Date(help="Date when the ticket was created")
+    date_start = fields.Datetime()
+    date_end = fields.Datetime()
     limit_date = fields.Datetime(help="Date and time when the ticket will be closed")
+    time = fields.Float(string='Time')
     assigned= fields.Boolean(help="Ticket assigned to someone")
     actions_todo = fields.Html()
     user_id = fields.Many2one(comodel_name ='res.users',string='Assigned to')
