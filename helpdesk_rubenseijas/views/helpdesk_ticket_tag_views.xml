@@ -27,6 +27,9 @@
                     <group name="main">
                         <field name="description"/>
                     </group>
+                    <group name="Tickets">
+                        <field name="ticket_ids"/>
+                    </group>
                 </sheet>
             </form>
         </field>

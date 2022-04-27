@@ -23,6 +23,7 @@
         <field name="model">helpdesk.ticket</field>
         <field name="arch" type="html">
             <form string="Tickects">
+                <field name="color" invisible="1"/>
                 <header>
                     <field name="state" widget="statusbar"/>
                 </header>
@@ -31,9 +32,12 @@
                         <label for="name" class="oe_edit_only" string="Ticket Name"/>
                         <h1><field name="name"/></h1>
                     </div>
-                    <group name="main" string="Ticket">
+                    <group name="main">
                         <group name="User">
                             <field name="user_id"/>
+                            <field name="user_email"/>
+                            <field name="partner_id"/>
+                            <field name="partner_email"/>
                             <field name="assigned"/>
                         </group>
                         <group name="Dates">
@@ -60,8 +64,12 @@
                              </group>
                         </page> 
                         <page string="Tags">
+                            <group name="Tag">
+                                <field name="tag_name"/>
+                                <button string="Create" name="create_and_link_tag" type="object" class="btn-primary"/>
+                             </group>
                             <group>
-                                <field name="tag_ids"/>
+                                <field name="tag_ids" nolabel="1"/>
                             </group>
                         </page>
                     </notebook>
