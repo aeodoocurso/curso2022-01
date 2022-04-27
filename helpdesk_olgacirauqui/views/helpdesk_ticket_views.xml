@@ -62,6 +62,18 @@
                                 <field name="tag_ids" nolabel="1"/>
                             </group>
                         </page>
+                        <page string="Tags">
+                            <group name="tag_name">
+                                <field name="tag_name"/>
+                                <button string="Create"
+                                    name="create_and_link_tag"
+                                    type="object"
+                                    context="{}"/>
+                            </group>
+                            <group>
+                                <field name="tag_ids" nolabel="1"/>
+                            </group>
+                        </page>
                     </notebook>
                 </sheet>
                 
