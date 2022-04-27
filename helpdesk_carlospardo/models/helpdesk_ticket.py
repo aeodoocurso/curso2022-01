@@ -26,6 +26,8 @@ class HelpdeskTicket(models.Model):
     user_email = fields.Char(
         string='User Email',
         related='user_id.partner_id.email')
+    ticket_company = fields.Boolean(
+        string='Ticket Company') 
     partner_id = fields.Many2one(
         comodel_name='res.partner',
         string='Partner')

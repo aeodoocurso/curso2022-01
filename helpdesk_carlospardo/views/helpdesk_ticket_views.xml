@@ -11,11 +11,10 @@
                 <field name="user_id"/>
                 <field name="date" optional="show"/>
                 <field name="limit_date" optional="hide"/>
-                <field name="state"/>                
+                <field name="state"/>    
             </tree>
         </field>
     </record>
-
     <record id="view_helpdesk_ticket_form" model="ir.ui.view">
         <field name="name">view.helpdesk_ticket.form</field>
         <field name="model">helpdesk.ticket</field>
@@ -31,10 +30,11 @@
                     </div>
                     <group name="main">
                         <group name="user">
-                            <field name="user_id"/>
+                            <field name="user_id" options="{'no_create': True, 'no_open': True}"/>
                             <field name="user_email"/>
-                            <field name="partner_id"/>
-                            <field name="partner_email"/>   
+                            <field name="ticket_company"/>
+                            <field name="partner_id" options="{'no_quick_create': True, 'no_open': True}" domain="[('is_company', '=', ticket_company)]"/>
+                            <field name="partner_email"/>                            
                             <field name="assigned"/>
                         </group>
                         <group name="dates">
@@ -58,7 +58,7 @@
                         <page string="Actions Done">
                             <button string="Review" name="review_actions" type="object" class="btn-primary"/>
                              <group>
-                                <field name="action_ids" nolabel="1"/>
+                                <field name="action_ids" nolabel="1" context="{'tree_viev_ref' : 'helpdesk_carlospardo.view_helpdesk_ticket_action_tree', 'form_view_ref':'helpdesk_carlospardo.view_helpdesk_ticket_action_form'}"/>
                              </group>
                         </page>
                         <page string="Tags">
