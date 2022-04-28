@@ -1,3 +1,4 @@
+from email.policy import default
 from odoo import fields,models, api
 
 class HelpdeskTicket(models.Model):
@@ -7,6 +8,8 @@ class HelpdeskTicket(models.Model):
     name = fields.Char()
     description = fields.Text()
     date = fields.Date(help="Date when the ticket was created")
+    date_start = fields.Datetime()
+    time = fields.Float(string='Time')
     limit_date = fields.Datetime(help="Date and time when the ticket will be closed")
     assigned= fields.Boolean(help="Ticket assigned to someone")
     actions_todo = fields.Html() 
@@ -24,6 +27,8 @@ class HelpdeskTicket(models.Model):
         # column1='col_name',
         # column2='other_col_name',
         string='Tags')
+    
+    color = fields.Integer('Color Index', default=0)
 
     state = fields.Selection(
         [('nuevo', 'Nuevo'),
