@@ -9,6 +9,7 @@
             <tree string="Actions">
                 <field name="name"/>
                 <field name="description"/>
+                <field name="user_id"/>
                 <field name="dedicated_time"/>
                 <field name="ticket_id"/>
             </tree>
@@ -29,6 +30,7 @@
                     <group name="main" string="Action">
                         <group name="Descripción">
                             <field name="description"/>
+                            <field name="user_id"/>
                         </group>
                         <group name="Dedicated Time">
                             <field name="dedicated_time"/>

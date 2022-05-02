@@ -8,6 +8,12 @@ class HelpdeskTicketAction(models.Model):
     description = fields.Text()
     dedicated_time = fields.Datetime()
     ticket_id = fields.Many2one("helpdesk.ticket", "Ticket")
+    user_id = fields.Many2one(
+        comodel_name="res.users", 
+        string="Assigned To",
+        search="_search_assigned",
+        inverse="_set_assigned"
+    )
 
     def review(self):
         for record in self:

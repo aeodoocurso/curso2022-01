@@ -22,6 +22,7 @@ class HelpdeskTicket(models.Model):
         string="User Email",
         related="user_id.partner_id.email"
     )
+    ticket_company = fields.Boolean(string='Ticket Company')
     state = fields.Selection(
         [('nuevo', 'Nuevo'),
         ('asignado', 'Asignado'),
