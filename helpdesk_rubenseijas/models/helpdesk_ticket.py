@@ -1,14 +1,24 @@
-from odoo import api, Command, fields, models, _
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
+
+from odoo import api, fields, models, _
+
+from odoo.exceptions import ValidationError
 
 class HelpdeskTicket(models.Model):
     _name = "helpdesk.ticket"
     _description = "Helpdesk Ticket"
 
+    @api.model
+    def _get_default_user(self):
+        return self.env.user
+
     name = fields.Char(required=True, copy=False)
     description = fields.Text()
     sequence = fields.Integer()
-    date = fields.Date(help="Date when the ticket was created")
-    due_date = fields.Datetime(help="Date and time when the ticket will be closed")
+    date = fields.Date(help="Date when the ticket was created", default=fields.datetime.now().date())
+    date_start = fields.Datetime()
+    limit_date = fields.Datetime(help="Date and time when the ticket will be closed")
     time = fields.Float(string="Time")
     assigned = fields.Boolean(help="Ticket assigned to someone")
     actions_todo = fields.Html()
@@ -16,7 +26,8 @@ class HelpdeskTicket(models.Model):
         comodel_name="res.users", 
         string="Assigned To",
         search="_search_assigned",
-        inverse="_set_assigned"
+        inverse="_set_assigned",
+        default=_get_default_user,  # default=lambda self: self.env.user,
     )
     user_email = fields.Char(
         string="User Email",
@@ -47,6 +58,28 @@ class HelpdeskTicket(models.Model):
     )
     color = fields.Integer('Color Index', default=0)
     tag_name = fields.Char(string="Tag Name")
+
+    @api.constrains('time')
+    def _check_time(self):
+        # Método tradicional
+    #    for ticket in self:
+    #        if ticket.time < 0:
+    #            raise ValidationError(_("The time have to be positive."))
+
+        # Más efectivo si dentro del for hay un if y el código todo dentro del if
+        # for ticket in self.filtered(lambda x: x.time > 0):
+        #    raise ValidationError(_("The time have to be positive."))
+
+        # No hace ni falta hacer el for
+        if self.filtered(lambda x: x.time < 0):
+           raise ValidationError(_("The time have to be positive."))
+
+    @api.onchange('date_start')
+    def _onchange_date_start(self):
+        if self.date_start:
+            self.limit_date = self.date_start + timedelta(days=1)
+        else:
+            self.limit_date = False
 
     def review_actions(self):
         self.ensure_one()
@@ -93,5 +126,3 @@ class HelpdeskTicket(models.Model):
             'ticket_ids': [(4, self.id, 0)],  # [(6, 0, self.ids)] or [(4, self.id, {'name': self.tag_name})] or [Command.set(self.ids)]
         })
         self.write({'tag_name': False})
-
-

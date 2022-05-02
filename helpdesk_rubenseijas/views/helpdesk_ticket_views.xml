@@ -11,7 +11,7 @@
                 <field name="name"/>
                 <field name="user_id"/>
                 <field name="date" optional="show"/>
-                <field name="due_date"/>
+                <field name="limit_date"/>
                 <field name="state"/>
             </tree>
         </field>
@@ -43,7 +43,8 @@
                         </group>
                         <group name="Dates">
                             <field name="date"/>
-                            <field name="due_date"/>
+                            <field name="date_start"/>
+                            <field name="limit_date"/>
                             <field name="time" widget="float_time"/>
                         </group>
                     </group>
@@ -79,7 +80,12 @@
                         <page string="Tags">
                             <group name="Tag">
                                 <field name="tag_name"/>
+                                <!-- Llamar método -->
                                 <button string="Create" name="create_and_link_tag" type="object" class="btn-primary"/>
+                                <!-- Llamar acción -->
+                                <button string="Create Pop Up" name="%(helpdesk_rubenseijas.helpdesk_ticket_new_tag_action)d" 
+                                    type="action" class="btn-primary"
+                                    context="{'default_name': tag_name}"/>
                              </group>
                             <group>
                                 <field name="tag_ids" nolabel="1"/>
@@ -102,11 +108,11 @@
                 <field name="user_id" />
                 <!-- filtrar tickets asignados -->
                 <filter name="user_assigned" string="User Assigned" domain="[('user_id', '=', False)]" />
-                <!-- filtrar tickets sin date_due-->
+                <!-- filtrar tickets sin limit_date-->
                 <filter name="no_date" string="No Date" domain="[('date', '=', False)]" />
                 <group name="group_by" string="Group By">
-                    <!-- agrupar por date_due -->
-                    <filter name="due_date" string="Due Date" context="{'group_by':'due_date'}" />
+                    <!-- agrupar por limit_date -->
+                    <filter name="limit_date" string="Limit Date" context="{'group_by':'limit_date'}" />
                     <!-- agrupar por usuario asignado -->
                     <filter name="user_id" string="User" context="{'group_by':'user_id'}" />
                 </group>
@@ -213,5 +219,9 @@
     <menuitem id="helpdesk_config_menu" name="Config" sequence="99" parent="helpdesk_menu"/>
     <menuitem id="helpdesk_tickets_menu" name="Tickets" sequence="10" parent="helpdesk_menu"/>
     <menuitem id="helpdesk_tickets_all_menu" name="All Tickets" sequence="10" parent="helpdesk_tickets_menu" action="helpdesk_ticket_action_all"/>
+
+    <menuitem id="helpdesk_ticket_tag_menu" name="Tags" parent="helpdesk_config_menu" action="helpdesk_rubenseijas.helpdesk_ticket_tag_action" sequence="20"/>
+    <menuitem id="helpdesk_ticket_action_menu" name="Actions" sequence="15" parent="helpdesk_config_menu" action="helpdesk_rubenseijas.helpdesk_ticket_actions_action"/>
+
 
 </odoo> 

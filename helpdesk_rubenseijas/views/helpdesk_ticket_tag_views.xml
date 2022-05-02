@@ -48,8 +48,8 @@
         </field>
     </record>
 
-    <record id="action_helpdesk_ticket_tags" model="ir.actions.act_window">
-        <field name="name">Helpdesk Tickets Tags</field>
+    <record id="helpdesk_ticket_tag_action" model="ir.actions.act_window">
+        <field name="name">Helpdesk Ticket Tag</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">helpdesk.ticket.tag</field>
         <field name="view_mode">tree,form</field>
@@ -60,8 +60,14 @@
             </p>
         </field>
     </record>
+
+    <record id="helpdesk_ticket_new_tag_action" model="ir.actions.act_window">
+        <field name="name">Helpdesk Tickets New Tag</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">helpdesk.ticket.tag</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <!-- <field name="context">{}</field> -->
+    </record>
     
-    <menuitem id="helpdesk_ticket_tag_menu" name="Tags" parent="helpdesk_config_menu" action="action_helpdesk_ticket_tags" sequence="20"/>
-
-
 </odoo> 

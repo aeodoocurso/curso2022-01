@@ -57,5 +57,4 @@
         </field>
     </record>
 
-    <menuitem id="helpdesk_ticket_action_menu" name="Actions" sequence="15" parent="helpdesk_config_menu" action="action_helpdesk_ticket_actions"/>
 </odoo> 
