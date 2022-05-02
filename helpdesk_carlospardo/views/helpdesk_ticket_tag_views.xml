@@ -56,8 +56,10 @@
         </field>
     </record>
 
-
-    <menuitem id="helpdesk_config_menu" name="Config" sequence="10" parent="helpdesk_menu"/>
-    <menuitem id="helpdesk_ticket_tag_menu" parent="helpdesk_config_menu" action="helpdesk_ticket_tag_action" sequence="20"/>
-
+    <record id="new_helpdesk_ticket_tag_action" model="ir.actions.act_window">
+        <field name="name">New Helpdesk Tags</field>
+        <field name="res_model">helpdesk.ticket.tag</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
 </odoo> 

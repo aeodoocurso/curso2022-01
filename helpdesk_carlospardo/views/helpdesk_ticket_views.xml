@@ -68,6 +68,10 @@
                                     name="create_and_link_tag"
                                     type="object"
                                     context="{}" />
+                                <button string="Create (popup)"
+                                    name="%(helpdesk_carlospardo.new_helpdesk_ticket_tag_action)d"
+                                    type="action"
+                                    context="{'default_name': tag_name}" />
                             </group>
                              <group>
                                 <field name="tag_ids" nolabel="1"/>
@@ -208,10 +212,9 @@
         </field>
     </record>
 
-
-
     <menuitem id="helpdesk_menu" name="Helpdesk" sequence="10"/>
     <menuitem id="helpdesk_tickets_menu" name="Tickets" sequence="10" parent="helpdesk_menu"/>
     <menuitem id="all_helpdesk_tickets_menu" name="All Tickets" sequence="10" parent="helpdesk_tickets_menu" action="helpdesk_ticket_action_all"/>
-
+    <menuitem id="helpdesk_config_menu" name="Config" sequence="10" parent="helpdesk_menu"/>
+    <menuitem id="helpdesk_ticket_tag_menu" parent="helpdesk_config_menu" action="helpdesk_ticket_tag_action" sequence="20"/>
 </odoo> 
