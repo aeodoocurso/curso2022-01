@@ -221,7 +221,7 @@
     <menuitem id="helpdesk_tickets_all_menu" name="All Tickets" sequence="10" parent="helpdesk_tickets_menu" action="helpdesk_ticket_action_all"/>
 
     <menuitem id="helpdesk_ticket_tag_menu" name="Tags" parent="helpdesk_config_menu" action="helpdesk_rubenseijas.helpdesk_ticket_tag_action" sequence="20"/>
-    <menuitem id="helpdesk_ticket_action_menu" name="Actions" sequence="15" parent="helpdesk_config_menu" action="helpdesk_rubenseijas.helpdesk_ticket_actions_action"/>
+    <menuitem id="helpdesk_ticket_action_menu" name="Actions" sequence="15" parent="helpdesk_config_menu" action="helpdesk_rubenseijas.helpdesk_ticket_action_action"/>
 
 
 </odoo> 

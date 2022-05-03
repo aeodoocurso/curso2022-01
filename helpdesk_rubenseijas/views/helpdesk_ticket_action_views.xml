@@ -44,7 +44,7 @@
         </field>
     </record>
 
-    <record id="action_helpdesk_ticket_actions" model="ir.actions.act_window">
+    <record id="helpdesk_ticket_action_action" model="ir.actions.act_window">
         <field name="name">Helpdesk Tickets Actions</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">helpdesk.ticket.action</field>
