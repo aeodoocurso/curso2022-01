@@ -6,6 +6,11 @@
         <field name="model">helpdesk.ticket.tag</field>
         <field name="arch" type="xml">
             <form string="Helpdesk Tags">
+                <header>
+                    <button string="Create Ticket"
+                        name="%(helpdesk_carlospardo.create_ticket_action)d"
+                        type="action"/>
+                </header>
                 <sheet>
                     <group name="main">
                         <field name="name" />
@@ -62,4 +67,7 @@
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
+
+        <menuitem id="helpdesk_ticket_tag_menu" parent="helpdesk_config_menu"
+        action="helpdesk_ticket_tag_action" sequence="20"/>
 </odoo> 
