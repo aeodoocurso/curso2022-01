@@ -32,7 +32,7 @@
                             <field name="description"/>
                             <field name="user_id"/>
                         </group>
-                        <group name="Dedicated Time">
+                        <group name="Time">
                             <field name="dedicated_time"/>
                         </group>
                         <group name="Ticket">

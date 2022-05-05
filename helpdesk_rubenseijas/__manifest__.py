@@ -12,5 +12,9 @@
         'views/helpdesk_ticket_views.xml',
         'security/helpdesk_security.xml',
         'security/ir.model.access.csv',
+        'reports/ticket_report_templates.xml',
+        'reports/partner_card_report_template.xml',
+        'reports/ticket_report.xml',
+        'reports/partner_report.xml',
     ],
 } 

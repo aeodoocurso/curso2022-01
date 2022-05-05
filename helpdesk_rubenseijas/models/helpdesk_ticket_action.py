@@ -11,8 +11,6 @@ class HelpdeskTicketAction(models.Model):
     user_id = fields.Many2one(
         comodel_name="res.users", 
         string="Assigned To",
-        search="_search_assigned",
-        inverse="_set_assigned"
     )
 
     def review(self):
