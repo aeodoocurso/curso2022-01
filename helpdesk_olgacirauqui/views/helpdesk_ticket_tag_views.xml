@@ -14,9 +14,10 @@
         <field name="model">helpdesk.ticket.tag</field>
         <field name="arch" type="xml">
             <form string="Helpdesk Tags">
+                
                 <sheet>
                     <group name="main">
-                        <field name="name"/>
+                        <field name="name" />
                     </group>
                     <group name="description" string="Description">
                         <field name="description" nolabel="1"/>
@@ -24,12 +25,21 @@
                     <group name="Tickets">
                         <field name="ticket_ids" nolabel="1"/>
                     </group>
-                        
                 </sheet>
-                
             </form>
         </field>
     </record>
+
+    <record id="view_helpdesk_ticket_tag_tree" model="ir.ui.view">
+        <field name="name">view.helpdesk_ticket_tag.tree</field>
+        <field name="model">helpdesk.ticket.tag</field>
+        <field name="arch" type="xml">
+            <tree string="Helpdesk Tags">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
     <record id="view_helpdesk_ticket_tag_search" model="ir.ui.view">
         <field name="name">view.helpdesk_ticket_tag.search</field>
         <field name="model">helpdesk.ticket.tag</field>
@@ -54,7 +64,17 @@
             </p>
         </field>
     </record>
-    <menuitem id="helpdeks_config_menu" name="Config" sequence="10" parent="helpdeks_menu"/>
-    <menuitem id="helpdesk_ticket_tag_menu" parent="helpdeks_config_menu"
-        action="helpdesk_ticket_tag_action" sequence="20"/>
+
+    
+    <record id="new_helpdesk_ticket_tag_action" model="ir.actions.act_window">
+        <field name="name">New Helpdesk Tags</field>
+        <field name="res_model">helpdesk.ticket.tag</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    
+
+
+        
 </odoo>

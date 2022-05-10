@@ -430,12 +430,12 @@ Merge: a3d2703 9b0d9cc
 Author: Angel Moya - PESOL <amoyapardo@gmail.com>
 Date:   Thu Mar 31 17:05:37 2022 +0200
 
-    Merge pull request #5 from angelmoya/main-cambio_03
+    Merge pull request #5 from olgacirauqui/main-cambio_03
     
     Main cambio 03
 
 [33mcommit 9b0d9cc89b36bd5968e62180714170d44f445a94[m
-Author: angelmoya <amoyapardo@gmail.com>
+Author: olgacirauqui <amoyapardo@gmail.com>
 Date:   Thu Mar 31 17:04:24 2022 +0200
 
     Update readme
@@ -445,12 +445,12 @@ Merge: 4201890 299bd27
 Author: Angel Moya - PESOL <amoyapardo@gmail.com>
 Date:   Thu Mar 31 16:56:21 2022 +0200
 
-    Merge pull request #3 from angelmoya/main-cambio_02
+    Merge pull request #3 from olgacirauqui/main-cambio_02
     
     OK -> SI
 
 [33mcommit 299bd2729c6ed2acaa5716d72698b5e049a47e45[m
-Author: angelmoya <amoyapardo@gmail.com>
+Author: olgacirauqui <amoyapardo@gmail.com>
 Date:   Thu Mar 31 16:47:35 2022 +0200
 
     OK -> SI
@@ -460,12 +460,12 @@ Merge: b0b871a 07c822e
 Author: Angel Moya - PESOL <amoyapardo@gmail.com>
 Date:   Thu Mar 31 16:48:54 2022 +0200
 
-    Merge pull request #2 from angelmoya/main-cambio_01
+    Merge pull request #2 from olgacirauqui/main-cambio_01
     
     OK -> SI
 
 [33mcommit 07c822ec74729aa6a126c6117fe81df93fc76f34[m
-Author: angelmoya <amoyapardo@gmail.com>
+Author: olgacirauqui <amoyapardo@gmail.com>
 Date:   Thu Mar 31 16:44:56 2022 +0200
 
     OK -> SI
@@ -475,24 +475,24 @@ Merge: 37d5041 5d68d76
 Author: Angel Moya - PESOL <amoyapardo@gmail.com>
 Date:   Thu Mar 31 16:40:01 2022 +0200
 
-    Merge pull request #1 from angelmoya/main
+    Merge pull request #1 from olgacirauqui/main
     
     ADD angel
 
 [33mcommit 5d68d766ee65933eb32a301fd079899071bd4915[m
-Author: angelmoya <amoyapardo@gmail.com>
+Author: olgacirauqui <amoyapardo@gmail.com>
 Date:   Thu Mar 31 16:34:18 2022 +0200
 
     ADD angel
 
 [33mcommit 37d50414576ea7edd7ba1eb8116e38fbabc0dd6c[m
-Author: angelmoya <amoyapardo@gmail.com>
+Author: olgacirauqui <amoyapardo@gmail.com>
 Date:   Thu Mar 31 16:23:43 2022 +0200
 
     Añadido descripción inicial
 
 [33mcommit 655834a2c99e1120246cffd32bafacc25117968d[m
-Author: angelmoya <amoyapardo@gmail.com>
+Author: olgacirauqui <amoyapardo@gmail.com>
 Date:   Thu Mar 31 16:18:27 2022 +0200
 
     first commit

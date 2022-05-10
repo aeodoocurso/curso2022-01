@@ -1,4 +1,4 @@
-Cada alumno creará un módulo helpdesk con su nombre, por ejemplo yo crearé el módulo "helpdesk_angelmoya".
+Cada alumno creará un módulo helpdesk con su nombre, por ejemplo yo crearé el módulo "helpdesk_olgacirauqui".
 
 Todos trabajaremos en el mismo repositorio, pero cada uno en su módulo en su fork.
 

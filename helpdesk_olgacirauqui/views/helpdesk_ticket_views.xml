@@ -12,6 +12,7 @@
                 <field name="user_id"/>
                 <field name="date" optional="show"/>
                 <field name="limit_date" optional="hide"/>
+                <field name="activity_ids" widget="list_activity" optional="show"/>
                 <field name="state"/>
             </tree>
         </field>
@@ -31,13 +32,19 @@
                     </div>
                     <group name="main">
                         <group name="user">
-                            <field name="user_id"/>
+                            <field name="user_id" options="{'no_create':True, 'no_open':True}"/>
+                            <field name="user_email"/>
+                            <field name="ticket_company"/>
+                            <field name="partner_id" options="{'no_quick_create':True, 'no_open':True}" context = "{'default_user_id': user_id, 'default_is_company': False}" domain="[('user_id', '=' ,user_id),('is_company', '=', False)]"/>
+                            <field name="partner_email"/>
                             <field name="assigned"/>
+                            <!--<field name="nombre_company"/>-->
+                            
                         </group>
                         <group name="dates">
                             <field name="date"/>
                             <field name="date_start"/>
-                            <field name="limit_date" />
+                            <field name="limit_date" /> 
                             <field name="time"  widget="float_time"/>
                         </group>
                     </group>
@@ -58,8 +65,16 @@
                             </group>
                         </page>
                         <page string="Actions Done">
+                        <button string="Review" name="review_actions" type="object" class="btn-primary"/>
                             <group>
-                                <field name="tag_ids" nolabel="1"/>
+                                <field name="action_ids" nolabel="1">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="name"/>
+                                        <field name="duration"/>
+                                        <field name="description"/>
+                                    </tree>
+                                </field>
                             </group>
                         </page>
                         <page string="Tags">
@@ -69,6 +84,10 @@
                                     name="create_and_link_tag"
                                     type="object"
                                     context="{}"/>
+                                <button string="Create (popup)"
+                                name="%(helpdesk_olgacirauqui.new_helpdesk_ticket_tag_action)d" 
+                                type="action"
+                                context="{'default_name':tag_name}"/>
                             </group>
                             <group>
                                 <field name="tag_ids" nolabel="1"/>
@@ -197,4 +216,7 @@
     <menuitem id="helpdeks_menu" name="Helpdesk" sequence="10"/>
     <menuitem id="helpdeks_tickets_menu" name="Tickets" sequence="10" parent="helpdeks_menu"/>
     <menuitem id="all_helpdesk_tickets_menu" name="All Tickets" sequence="10" parent="helpdeks_tickets_menu" action="helpdesk_ticket_action_all"/>
+    <menuitem id="helpdeks_config_menu" name="Config" sequence="10" parent="helpdeks_menu"/>
+    <menuitem id="helpdesk_ticket_tag_menu" parent="helpdeks_config_menu"
+        action="helpdesk_ticket_tag_action" sequence="20"/>
 </odoo>
