@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_cron_unused_tags" model="ir.cron">
+        <field name="name">Helpdesk: Clean Unused Tags</field>
+        <field name="model_id" ref="helpdesk_rubenseijas.model_helpdesk_ticket_tag"/>
+        <field name="state">code</field>
+        <field name="code">model._clean_unused_tags()</field>
+        <field name='interval_number'>1</field>
+        <field name='interval_type'>days</field>
+        <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 20:00:00')"/>
+        <field name="numbercall">-1</field>
+    </record>
+</odoo>

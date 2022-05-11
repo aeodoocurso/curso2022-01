@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="demo_admin_ticket" model="helpdesk.ticket">
+        <field name="name">Ticket Demo Admin</field>
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="time" eval="5"/>
+    </record>
+
+    <record id="demo_user_ticket" model="helpdesk.ticket">
+        <field name="name">Ticket Demo User</field>
+        <field name="user_id" ref="base.user_demo"/>
+        <field name="time" eval="6"/>
+    </record>
+
+</odoo>
