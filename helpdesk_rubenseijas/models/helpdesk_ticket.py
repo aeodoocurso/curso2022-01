@@ -8,6 +8,7 @@ from odoo.exceptions import ValidationError
 class HelpdeskTicket(models.Model):
     _name = "helpdesk.ticket"
     _description = "Helpdesk Ticket"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     @api.model
     def _get_default_user(self):
@@ -20,14 +21,18 @@ class HelpdeskTicket(models.Model):
     date_start = fields.Datetime()
     limit_date = fields.Datetime(help="Date and time when the ticket will be closed")
     time = fields.Float(string="Time")
-    assigned = fields.Boolean(help="Ticket assigned to someone")
+    assigned = fields.Boolean(
+        help="Ticket assigned to someone",
+        compute='_compute_assigned',
+        search='_search_assigned',
+        inverse='_set_assigned',
+    )
     actions_todo = fields.Html()
     user_id = fields.Many2one(
         comodel_name="res.users", 
         string="Assigned To",
-        search="_search_assigned",
-        inverse="_set_assigned",
         default=_get_default_user,  # default=lambda self: self.env.user,
+        tracking=True,
     )
     user_email = fields.Char(
         string="User Email",
@@ -41,7 +46,8 @@ class HelpdeskTicket(models.Model):
         ('pendiente', 'Pendiente'),
         ('resuelto', 'Resuelto'),
         ('cancelado', 'Cancelado')],
-        string="State", default="nuevo"
+        string="State", 
+        default="nuevo",
     )
     partner_id = fields.Many2one("res.partner", "Customer")
     partner_email = fields.Char(
@@ -49,6 +55,7 @@ class HelpdeskTicket(models.Model):
         related="partner_id.email"
     )
     action_ids = fields.One2many(comodel_name="helpdesk.ticket.action", inverse_name="ticket_id")
+    tag_name = fields.Char(string="Tag Name")
     tag_ids = fields.Many2many(
         comodel_name='helpdesk.ticket.tag',  # El otro modelo
         relation="helpdesk_ticket_tag_helpdesk_ticket_rel",  # nombre igual en ambos lados
@@ -57,7 +64,17 @@ class HelpdeskTicket(models.Model):
         string='Tags',
     )
     color = fields.Integer('Color Index', default=0)
-    tag_name = fields.Char(string="Tag Name")
+
+    def to_asignado(self):
+        self.ensure_one()
+        self.state = 'asignado'
+    
+    def to_en_proceso(self):
+        self.write({'state': 'en_proceso'})
+    
+    def to_pendiente(self):
+        for record in self:
+            record.state = 'pendiente'
 
     @api.constrains('time')
     def _check_time(self):
@@ -98,6 +115,11 @@ class HelpdeskTicket(models.Model):
         else:
             new_operator = '='
         return [('user_id', new_operator, False)]
+
+    @api.depends('user_id')
+    def _compute_assigned(self):
+        for record in self:
+            record.assigned = record.user_id
 
     def _set_assigned(self):
         for record in self:

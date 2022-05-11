@@ -7,11 +7,12 @@
         <field name="model">helpdesk.ticket.action</field>
         <field name="arch" type="html">
             <tree string="Actions">
+                <field name="sequence" widget="handle"/> 
                 <field name="name"/>
-                <field name="description"/>
+                <!-- <field name="description"/> -->
                 <field name="user_id"/>
-                <field name="dedicated_time"/>
-                <field name="ticket_id"/>
+                <field name="duration" sum="Total"/>
+                <!-- <field name="ticket_id"/> -->
             </tree>
         </field>
     </record>
@@ -21,23 +22,17 @@
         <field name="name">view.helpdesk.ticket.action.form</field>
         <field name="model">helpdesk.ticket.action</field>
         <field name="arch" type="html">
-            <form string="Actions">
+            <form string="Action">
                 <sheet>
                     <div class="oe_title">
                         <label for="name" class="oe_edit_only" string="Action Name"/>
                         <h1><field name="name"/></h1>
                     </div>
-                    <group name="main" string="Action">
-                        <group name="Descripción">
-                            <field name="description"/>
-                            <field name="user_id"/>
-                        </group>
-                        <group name="Time">
-                            <field name="dedicated_time"/>
-                        </group>
-                        <group name="Ticket">
-                            <field name="ticket_id"/>
-                        </group>
+                    <group name="main">
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="user_id"/>
+                        <field name="duration"/>
                     </group>
                 </sheet>
             </form>

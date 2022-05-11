@@ -4,10 +4,14 @@ class HelpdeskTicketAction(models.Model):
     _name = "helpdesk.ticket.action"
     _description = "Helpdesk Ticket Action"
 
+    sequence = fields.Integer()
     name = fields.Char(required=True)
     description = fields.Text()
-    dedicated_time = fields.Datetime()
-    ticket_id = fields.Many2one("helpdesk.ticket", "Ticket")
+    duration = fields.Float()
+    ticket_id = fields.Many2one(
+        comodel_name="helpdesk.ticket", 
+        string="Ticket",
+    )
     user_id = fields.Many2one(
         comodel_name="res.users", 
         string="Assigned To",

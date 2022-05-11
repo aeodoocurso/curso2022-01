@@ -21,7 +21,7 @@
             <form string="Tags">
                 <sheet>
                     <header>
-                        <button name="%(helpdesk_rubenseijas.create_ticket_action)d"  string="Create Tickets" type="action" class="btn-primary" data-hotkey="w"/>
+                        <button name="%(helpdesk_rubenseijas.create_ticket_action)d"  string="Create Ticket" type="action" class="btn-primary" data-hotkey="w"/>
                     </header>
                     <div class="oe_title">
                         <label for="name" class="oe_edit_only" string="Tag Name"/>
@@ -31,7 +31,7 @@
                         <field name="description"/>
                     </group>
                     <group name="Tickets">
-                        <field name="ticket_ids"/>
+                        <field name="ticket_ids" nolabel="1"/>
                     </group>
                 </sheet>
             </form>

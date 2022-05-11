@@ -12,6 +12,7 @@
                 <field name="user_id"/>
                 <field name="date" optional="show"/>
                 <field name="limit_date"/>
+                <field name="activity_ids" widget="list_activity" optional="show"/>
                 <field name="state"/>
             </tree>
         </field>
@@ -37,7 +38,11 @@
                             <field name="user_id" options="{'no_quick_create': True}"/>
                             <field name="user_email"/>
                             <field name="ticket_company" />
-                            <field name="partner_id" options="{'no_quick_create': True, 'no_open': True}" domain="[('is_company', '=', ticket_company)]"/>
+                            <field name="partner_id" 
+                                options="{'no_quick_create': True, 'no_open': True}"
+                                context="{'defaul_user_id': user_id, 'default_is_company': False}" 
+                                domain="[('user_id', '=', user_id), ('is_company', '=', False)]"/>
+                                <!-- domain="[('is_company', '=', ticket_company)]"/> -->
                             <field name="partner_email"/>
                             <field name="assigned"/>
                         </group>
@@ -93,6 +98,11 @@
                         </page>
                     </notebook>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
             </form>
         </field>
     </record>
